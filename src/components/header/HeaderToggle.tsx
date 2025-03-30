@@ -29,7 +29,7 @@ const HeaderToggle = ({ isOpen, setIsOpen }: HeaderToggleProps) => {
                     </>
                 )}
             </NavLink>
-            <div className="relative md:hidden w-9 h-9 cursor-pointer hover:bg-blue-300/50 rounded-lg flex items-center justify-center transition-colors duration-300"
+            <div className="relative md:hidden w-9 h-9 cursor-pointer hover:bg-blue-300/50 active:bg-blue-300/50 rounded-lg flex items-center justify-center transition-colors duration-300"
                 onClick={() => setIsOpen(!isOpen)}>
                 <div className="flex flex-col justify-center items-center gap-1.5">
                     <span

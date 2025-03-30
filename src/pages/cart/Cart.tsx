@@ -122,19 +122,19 @@ const Cart = () => {
                                                         <button onClick={() => dispatch(updateProduct({
                                                             id: item.id,
                                                             quantity: item.quantity - 1
-                                                        }))} className="p-2 cursor-pointer rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">
+                                                        }))} className="p-2 cursor-pointer rounded-lg border border-gray-300 hover:bg-gray-100 active:bg-gray-100 transition-colors">
                                                             <FiMinus className="w-4 h-4" />
                                                         </button>
 
                                                         <input value={item.quantity} onChange={(e) => dispatch(updateProduct({
                                                             id: item.id,
                                                             quantity: +e.target.value
-                                                        }))} className="w-12 text-center px-2 py-1 border rounded-lg" />
+                                                        }))} className="w-12 text-center px-2 py-1 border border-gray-400 rounded-lg" />
 
                                                         <button onClick={() => dispatch(updateProduct({
                                                             id: item.id,
                                                             quantity: item.quantity + 1
-                                                        }))} className="p-2 cursor-pointer rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">
+                                                        }))} className="p-2 cursor-pointer rounded-lg border border-gray-300 hover:bg-gray-100 active:bg-gray-100 transition-colors">
                                                             <FiPlus className="w-4 h-4" />
                                                         </button>
                                                     </div>
@@ -182,7 +182,7 @@ const Cart = () => {
                                                         <button onClick={() => dispatch(updateProduct({
                                                             id: item.id,
                                                             quantity: item.quantity - 1
-                                                        }))} className="p-2 rounded-lg border border-gray-300 hover:bg-gray-200 cursor-pointer">
+                                                        }))} className="p-2 rounded-lg border border-gray-300 hover:bg-gray-200 active:bg-gray-200 cursor-pointer">
                                                             <FiMinus className="w-4 h-4" />
                                                         </button>
 
@@ -194,7 +194,7 @@ const Cart = () => {
                                                         <button onClick={() => dispatch(updateProduct({
                                                             id: item.id,
                                                             quantity: item.quantity + 1
-                                                        }))} className="p-2 rounded-lg border border-gray-300 hover:bg-gray-200 cursor-pointer">
+                                                        }))} className="p-2 rounded-lg border border-gray-300 hover:bg-gray-200 active:bg-gray-200 cursor-pointer">
                                                             <FiPlus className="w-4 h-4" />
                                                         </button>
                                                     </div>
@@ -213,13 +213,13 @@ const Cart = () => {
                                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
                                     <div className='flex items-center gap-x-20'>
                                         <div>
-                                            <button onClick={() => dispatch(clearCart())} className="btn btn-active lg:btn-lg flex items-center hover:scale-105 transition-all duration-300 whitespace-nowrap cursor-pointer">
+                                            <button onClick={() => dispatch(clearCart())} className="btn btn-active lg:btn-lg flex items-center hover:scale-105 active:scale-105 transition-all duration-300 whitespace-nowrap cursor-pointer">
                                                 <FiTrash2 className="w-5 h-auto" />
                                                 Clear Entire Cart
                                             </button>
                                         </div>
                                         {/* Mobile Total */}
-                                        <div className="text-2xl block md:hidden font-bold text-gray-800 min-w-[180px] text-right">
+                                        <div className="text-2xl block md:hidden font-bold text-gray-800 text-right whitespace-break-spaces">
                                             Total: ${total.toLocaleString()}
                                         </div>
                                     </div>
@@ -233,7 +233,7 @@ const Cart = () => {
                                             })}
                                         </div>
                                         <p className="text-sm text-gray-600">Shipping & taxes calculated at checkout</p>
-                                        <Link to='/products' className="inline-block w-full cursor-pointer md:w-auto px-11 py-3 bg-gradient-to-r from-zinc-500 to-stone-700 hover:from-zinc-700 hover:to-stone-500 text-white rounded-lg font-semibold shadow-md transition-all duration-200 whitespace-nowrap">
+                                        <Link to='/products' className="inline-block w-full cursor-pointer md:w-auto px-11 py-3 bg-gradient-to-r from-zinc-500 to-stone-700 hover:from-zinc-700 hover:to-stone-500 active:from-zinc-700 active:to-stone-500 text-white rounded-lg font-semibold shadow-md transition-all duration-200 whitespace-nowrap">
                                             Proceed to Checkout
                                         </Link>
                                     </div>
