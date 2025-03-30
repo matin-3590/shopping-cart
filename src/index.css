@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@layer base {
+    body {
+        @apply relative overflow-x-hidden;
+    }
+}
